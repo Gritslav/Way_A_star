@@ -1,9 +1,8 @@
 ﻿#include "main_header.h"
 
 void map_loader(std::map<int, way_point>&, int*, int*);
-void update_lists();
-void update_ways();
-void set_way();
+void map_saver(std::map<int, way_point>&, int, int, int);
+int set_way(std::map<int, way_point>&, std::vector<way_point>&, std::vector<way_point>&, std::vector<int>&, int, int);
 
 int main()
 {
@@ -11,6 +10,9 @@ int main()
 	int N2 = 0;
 	std::map<int, way_point> way_map;
 	map_loader(way_map, &N1, &N2);
+	
+	
+
 	std::vector<int> start_xy;
 	start_xy.push_back(0);
 	start_xy.push_back(0);
@@ -32,16 +34,22 @@ int main()
 	{
 		for (int j = 0; j < N2; j++)
 		{
-			it->second.Set_hevristic(i, j, finish_xy[0], finish_xy[1]);
-			it->second.Set_priority();
-			std::cout << it->second.Get_priority() << ' ';
+			if (it->second.Get_status() == 0)
+			{
+				it->second.Set_hevristic(i, j, finish_xy[0], finish_xy[1]);
+				it->second.Set_priority();
+			}
+			else
+			{
+				it->second.Set_hevristic(0, 0, 0, 0);
+				it->second.Set_priority();
+			}
 			it++;
 		}
-		std::cout << std::endl;
 	}
-	
 
-	system("pause");
+	map_saver(way_map, N1, N2, set_way(way_map, opened_list, closed_list, finish_xy, N1, N2));
+	
 	return 0;
 }
 

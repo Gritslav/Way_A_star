@@ -4,8 +4,10 @@
 class way_point
 {
 private:
-	std::vector<int> this_xy;
-	std::vector<int> pre_xy;
+	int this_x;
+	int this_y;
+	int pre_x;
+	int pre_y;
 	double priority;
 	double hevristic;
 	double way_length;

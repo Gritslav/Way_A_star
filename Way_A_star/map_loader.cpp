@@ -59,5 +59,6 @@ void map_loader(std::map<int, way_point> &way_map, int *N1, int *N2)
 		}
 		*N1 = j;
 		fin.close();
+
 	}
 }

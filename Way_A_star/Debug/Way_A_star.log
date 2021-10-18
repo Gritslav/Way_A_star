@@ -1,8 +1,4 @@
 ﻿  Way_A_star.cpp
-  map_loader.cpp
-  set_way.cpp
   update_lists.cpp
-  update_ways.cpp
-  way_point.cpp
   Создание кода...
   Way_A_star.vcxproj -> D:\c++\way\Way_A_star\Debug\Way_A_star.exe

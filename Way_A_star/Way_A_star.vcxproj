@@ -152,9 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="map_loader.cpp" />
+    <ClCompile Include="map_saver.cpp" />
+    <ClCompile Include="point_check.cpp" />
     <ClCompile Include="set_way.cpp" />
     <ClCompile Include="update_lists.cpp" />
-    <ClCompile Include="update_ways.cpp" />
     <ClCompile Include="Way_A_star.cpp" />
     <ClCompile Include="way_point.cpp" />
   </ItemGroup>

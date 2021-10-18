@@ -24,13 +24,16 @@
     <ClCompile Include="update_lists.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="update_ways.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="set_way.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="map_loader.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="map_saver.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="point_check.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

@@ -12,7 +12,15 @@ int way_point::Get_status()
 
 void way_point::Set_priority()
 {
-	way_point::priority = way_point::hevristic + way_point::way_length;
+	if (way_point::status == 0)
+	{
+		way_point::priority = way_point::hevristic + way_point::way_length;
+	}
+	else
+	{
+		way_point::priority = -1;
+	}
+	
 }
 double way_point::Get_priority()
 {
@@ -39,28 +47,28 @@ double way_point::Get_way_length()
 
 void way_point::Set_this_xy(int x, int y)
 {
-	way_point::this_xy.push_back(x);
-	way_point::this_xy.push_back(y);
+	way_point::this_x=x;
+	way_point::this_y=y;
 }
 int way_point::Get_this_x()
 {
-	return way_point::this_xy[0];
+	return way_point::this_x;
 }
 int way_point::Get_this_y()
 {
-	return way_point::this_xy[1];
+	return way_point::this_y;
 }
 
 void way_point::Set_pre_xy(int x, int y)
 {
-	way_point::pre_xy.push_back(x);
-	way_point::pre_xy.push_back(y);
+	way_point::pre_x=x;
+	way_point::pre_y=y;
 }
 int way_point::Get_pre_x()
 {
-	return way_point::pre_xy[0];
+	return way_point::pre_x;
 }
 int way_point::Get_pre_y()
 {
-	return way_point::pre_xy[1];
+	return way_point::pre_y;
 }
