@@ -6,9 +6,9 @@ void update_lists(std::map<int, way_point>& way_map, std::vector<way_point>& ope
 	std::vector<way_point>& closed_list, way_point& current_point, int N1, int N2, int current_num)
 {
 	std::map <int, way_point>::iterator it;
-	int N0 = current_point.Get_this_x() + N2*current_point.Get_this_y();
+	int N0 = current_point.Get_this_x() + N1*current_point.Get_this_y();
 
-	if (N0%N2 != N1 - 1)
+	if (N0%N1 != N1 - 1)
 	{
 		it = way_map.find(N0 + 1);
 		if (it != way_map.end())
@@ -16,7 +16,7 @@ void update_lists(std::map<int, way_point>& way_map, std::vector<way_point>& ope
 			point_check(it->second, opened_list, closed_list, current_point);
 		}
 	}
-	if (N0%N2 != 0)
+	if (N0%N1 != 0)
 	{
 		it = way_map.find(N0 - 1);
 		if (it != way_map.end())
@@ -36,7 +36,7 @@ void update_lists(std::map<int, way_point>& way_map, std::vector<way_point>& ope
 	}
 
 
-	if (!(N0 < N2))
+	if (!(N0 < N1))
 	{
 		it = way_map.find(N0 - N1);
 		if (it != way_map.end())

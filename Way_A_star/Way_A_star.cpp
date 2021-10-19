@@ -17,8 +17,8 @@ int main()
 	start_xy.push_back(0);
 	start_xy.push_back(0);
 	std::vector<int> finish_xy;
-	finish_xy.push_back(N2 - 1);
 	finish_xy.push_back(N1 - 1);
+	finish_xy.push_back(N2 - 1);
 
 
 	std::vector<way_point> opened_list;

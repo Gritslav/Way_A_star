@@ -26,7 +26,7 @@ void map_loader(std::map<int, way_point> &way_map, int *N1, int *N2)
 				trash.Set_this_xy(i, j);
 				trash.Set_way_length(0);
 				trash.Set_status(str_read[i * 2] - 48);
-				way_map[j*(*N2) + i] = trash;
+				way_map[j*(*N1) + i] = trash;
 				i++;
 				while (str_read[i * 2 - 1] != '\0')
 				{
@@ -34,7 +34,7 @@ void map_loader(std::map<int, way_point> &way_map, int *N1, int *N2)
 					trash.Set_this_xy(i, j);
 					trash.Set_way_length(0);
 					trash.Set_status(str_read[i * 2] - 48);
-					way_map[j*(*N2) + i] = trash;
+					way_map[j*(*N1) + i] = trash;
 					i++;
 				}
 			}
@@ -47,17 +47,17 @@ void map_loader(std::map<int, way_point> &way_map, int *N1, int *N2)
 					trash.Set_this_xy(i, j);
 					trash.Set_way_length(0);
 					trash.Set_status(str_read[i] - 48);
-					way_map[j*(*N2) + i] = trash;
+					way_map[j*(*N1) + i] = trash;
 					i++;
 				}
 			}
 			if (j == 0)
 			{
-				*N2 = i;
+				*N1 = i;
 			}
 			j++;
 		}
-		*N1 = j;
+		*N2 = j;
 		fin.close();
 
 	}

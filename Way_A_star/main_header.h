@@ -8,5 +8,3 @@
 #include <cmath>
 
 #include "way_point.h"
-
-

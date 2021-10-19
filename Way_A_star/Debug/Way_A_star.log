@@ -1,3 +1,12 @@
-﻿  set_way.cpp
-d:\c++\way\way_a_star\way_a_star\set_way.cpp(20): warning C4018: <: несоответствие типов со знаком и без знака
+﻿  map_loader.cpp
+  map_saver.cpp
+  point_check.cpp
+d:\c++\way\way_a_star\way_a_star\point_check.cpp(10): warning C4018: <: несоответствие типов со знаком и без знака
+d:\c++\way\way_a_star\way_a_star\point_check.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
+  set_way.cpp
+d:\c++\way\way_a_star\way_a_star\set_way.cpp(21): warning C4018: <: несоответствие типов со знаком и без знака
+  update_lists.cpp
+  Way_A_star.cpp
+  way_point.cpp
+  Создание кода...
   Way_A_star.vcxproj -> D:\c++\way\Way_A_star\Debug\Way_A_star.exe
