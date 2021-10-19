@@ -8,10 +8,14 @@ int set_way(std::map<int, way_point>& way_map, std::vector<way_point>& opened_li
 {
 	way_point current_point = opened_list[0];
 	int current_num = 0;
-	while (((current_point.Get_this_x() != finish_xy[0]) ||
-		(current_point.Get_this_y() != finish_xy[1])) && (!opened_list.empty()))
+	while ((current_point.Get_this_x() != finish_xy[0]) ||
+		(current_point.Get_this_y() != finish_xy[1]))
 	{
-		update_lists(way_map, opened_list, closed_list, current_point, N1, N2, current_num);
+		update_lists(way_map, opened_list, closed_list, current_point, N2, N1, current_num);
+		if (opened_list.empty())
+		{
+			break;
+		}
 		int min_priority = 0;
 		for (int i = 1; i < opened_list.size(); i++)
 		{
@@ -40,3 +44,4 @@ int set_way(std::map<int, way_point>& way_map, std::vector<way_point>& opened_li
 	return 0;
 
 }
+

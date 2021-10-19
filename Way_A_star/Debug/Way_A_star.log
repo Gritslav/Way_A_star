@@ -1,4 +1,3 @@
-﻿  Way_A_star.cpp
-  update_lists.cpp
-  Создание кода...
+﻿  set_way.cpp
+d:\c++\way\way_a_star\way_a_star\set_way.cpp(20): warning C4018: <: несоответствие типов со знаком и без знака
   Way_A_star.vcxproj -> D:\c++\way\Way_A_star\Debug\Way_A_star.exe
